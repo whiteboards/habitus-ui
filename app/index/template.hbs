@@ -1,0 +1,30 @@
+{{outlet}}
+<section class="hero is-medium is-primary is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Habitus CMS
+      </h1>
+      <h2 class="subtitle">
+        Elegant, minimal, complete.
+      </h2>
+    </div>
+  </div>
+</section>
+{{#link-to 'about' class="ui button"}}
+  About
+{{/link-to}}
+
+{{#link-to 'contact' class="ui button"}}
+  Contact
+{{/link-to}}
+  <div class="default text">pages</div>
+    <i class="dropdown icon"></i>
+  <div class="menu">
+  {{#each model as |page|}}
+    <div class="item" data-id="{{page.id}}">
+      {{page.title}}
+    </div>
+    
+  {{/each}}
+  </div>
