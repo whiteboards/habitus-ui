@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ember-test',
+    modulePrefix: 'habitus-ui',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
