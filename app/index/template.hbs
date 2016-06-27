@@ -11,18 +11,22 @@
       </div>
     </div>
   </section>
-  {{#link-to 'index' class="ui button"}}
-    Home
-  {{/link-to}}
+  <section>
+    <div class="container">
+      {{#link-to 'index' class="ui button"}}
+        Home
+      {{/link-to}}
 
-  <div class="default text">pages</div>
-    <i class="dropdown icon"></i>
-  <div class="menu">
-    {{#each model as |page|}}
-      <div class="item" data-id="{{page.id}}">
-        {{page.title}}
+      <div class="default text">pages</div>
+        <i class="dropdown icon"></i>
+      <div class="menu">
+        {{#each model as |page|}}
+          <div class="item" data-id="{{page.id}}">
+            {{page.title}}
+          </div>
+          
+        {{/each}}
       </div>
-      
-    {{/each}}
-  </div>
+    </div>
+  </section>
 </div>
