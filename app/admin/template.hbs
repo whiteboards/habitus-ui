@@ -1,4 +1,3 @@
-{{outlet}}
 <section class="section">
     <div class="container-fluid">
       <div class="columns">
@@ -17,7 +16,11 @@
               <li><a href="#">Pages</a>
                 <ul>
                   <li><a href="#">Add New Page</a></li>
-                  <li><a href="#">**list of existing**</a></li>
+                  <li>
+                  {{#link-to 'admin.pages' class="nav-item"}}
+                    View Pages
+                  {{/link-to}}
+                  </li>
                 </ul>
               </li>
               <li>
@@ -40,60 +43,7 @@
           </aside>
         </div>
         <div class='column is-two-quarter'>
-          <div class="notification is-success">
-            <button class="delete"></button>
-            <strong>Success! You've setup Habitus!</strong>
-            <br/>
-            There is some sample content in the site that you can look around at.
-            <br/>
-            Get started by going through the links on the left, and cusotmizing your site
-            to your liking!
-          </div>
-          <div class="card is-fullwidth">
-            <header class="card-header">
-              <p class="card-header-title">
-                Your latest posts
-              </p>
-              <a class="card-header-icon">
-                <i class="fa fa-angle-down"></i>
-              </a>
-            </header>
-            <div class="card-content">
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.. <a href="#">#css</a> <a href="#">#responsive</a>
-                <br>
-                <small>11:09 PM - 1 Jan 2016</small>
-              </div>
-            </div>
-            <footer class="card-footer">
-              <a class="card-footer-item">Save</a>
-              <a class="card-footer-item">Edit</a>
-              <a class="card-footer-item">Delete</a>
-            </footer>
-          </div>
-          <br/>
-          <div class="card is-fullwidth">
-            <header class="card-header">
-              <p class="card-header-title">
-                User stats
-              </p>
-              <a class="card-header-icon">
-                <i class="fa fa-angle-down"></i>
-              </a>
-            </header>
-            <div class="card-content">
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.. <a href="#">#css</a> <a href="#">#responsive</a>
-                <br>
-                <small>11:09 PM - 1 Jan 2016</small>
-              </div>
-            </div>
-            <footer class="card-footer">
-              <a class="card-footer-item">Save</a>
-              <a class="card-footer-item">Edit</a>
-              <a class="card-footer-item">Delete</a>
-            </footer>
-          </div>
+          {{outlet}}
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ export default Model.extend({
   firstName: attr('string'),
   lastName: attr('string'),
   email: attr('string'),
+  role: attr('string'),
   displayName: attr('string'),
   password: attr('string')  
 });

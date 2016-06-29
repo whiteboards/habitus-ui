@@ -23,6 +23,11 @@ let pages = [{
 
 export default Ember.Route.extend({
   model() {
-    return pages
+    return this.store.findAll('page');
+  },
+  afterModel(model, transition) {
+    if (model.get('length') < 1) {
+      this.transitionTo('admin');
+    }
   }
 })
