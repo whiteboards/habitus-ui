@@ -18,7 +18,9 @@
       <a class="card-footer-item">Edit</a>
       <a class="card-footer-item">Delete</a>
     {{else}}
-      <a class="card-footer-item button is-primary">New</a>
+      {{#link-to 'admin.pages' class="card-footer-item button is-primary"}}
+        New
+      {{/link-to}}
     {{/if}}
   </footer>
 </div>
