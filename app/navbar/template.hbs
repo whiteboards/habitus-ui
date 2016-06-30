@@ -1,7 +1,7 @@
-<nav class="nav">
+<nav class="nav nav--top">
   <div class="nav-left">
     {{#link-to 'index' class="nav-item"}}
-      Habitus
+      <img src='/logo5.svg' alt='Habitus logo'>
     {{/link-to}}
   </div>
 <!--
@@ -27,6 +27,9 @@
   <div class="nav-right nav-menu">
     {{#link-to 'index' class="nav-item"}}
       Home
+    {{/link-to}}
+    {{#link-to 'login' class="nav-item"}}
+      Login
     {{/link-to}}
     {{#link-to 'admin' class="nav-item"}}
       Admin
